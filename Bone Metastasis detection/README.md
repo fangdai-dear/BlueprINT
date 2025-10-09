@@ -1,18 +1,14 @@
 <div align="center">
 
-# 🩻 BlueprINT Detection Module
+# BlueprINT Detection Module
 
 **A YOLO11-based Object Detection Framework for Medical Imaging**
-
-<img width="100%" src="https://raw.githubusercontent.com/ultralytics/assets/main/yolov8/banner-yolov8.png" alt="YOLO11 banner">
-
-[English](README.md) | [中文](README_CN.md)
 
 </div>
 
 ---
 
-## 🚀 Overview
+## Overview
 
 This repository provides the **detection module** of the BlueprINT framework — a YOLO11-based deep learning system optimized for **medical lesion localization and classification**.  
 It supports **3D lesion detection**, **ROI extraction**, and **radiologic subtype classification** from CT or PET/CT images, and can be easily adapted to other medical imaging tasks.
@@ -21,7 +17,7 @@ Compared with the standard Ultralytics YOLO implementation, this version retains
 
 ---
 
-## 🧠 Model Architecture
+## Model Architecture
 
 - **Backbone:** CSP-based encoder with FeatUp feature enhancement  
 - **Neck:** FPN + PAN structure for multi-scale fusion  
@@ -51,7 +47,7 @@ ultralytics/
 
 ---
 
-## ⚙️ Installation
+## Installation
 
 Python ≥3.8 and PyTorch ≥1.8 are required.
 
@@ -66,7 +62,7 @@ pip install -r requirements.txt
 
 ---
 
-## 🏋️ Training
+## Training
 
 You can train the model using the standard YOLO CLI or Python API.
 
@@ -85,7 +81,7 @@ model.train(data="data/bone.yaml", epochs=100, imgsz=640, device=0)
 
 ---
 
-## 🔍 Inference
+## Inference
 
 ```bash
 yolo predict model=weights/best.pt source=images/test/ imgsz=640 conf=0.25 save=True
@@ -102,7 +98,7 @@ results[0].show()
 
 ---
 
-## 🧩 Dataset Structure
+## Dataset Structure
 
 ```
 data/
@@ -124,7 +120,7 @@ class x_center y_center width height
 
 ---
 
-## 🧪 Evaluation
+## Evaluation
 
 Evaluate trained models:
 ```bash
@@ -138,7 +134,7 @@ Metrics include:
 
 ---
 
-## 🧰 Export
+## Export
 
 Export the trained model for deployment:
 ```bash
@@ -147,7 +143,7 @@ yolo export model=weights/best.pt format=onnx dynamic=True
 
 ---
 
-## 🤝 Acknowledgements
+## Acknowledgements
 
 This repository is built upon:
 - [Ultralytics YOLO11](https://github.com/ultralytics/ultralytics)
