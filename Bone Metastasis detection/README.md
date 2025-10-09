@@ -6,7 +6,7 @@
 
 </div>
 
----
+
 
 ## Overview
 
@@ -15,7 +15,7 @@ It supports **3D lesion detection**, **ROI extraction**, and **radiologic subtyp
 
 Compared with the standard Ultralytics YOLO implementation, this version retains only the **object detection task**, simplifying the model for research and clinical use.
 
----
+
 
 ## Model Architecture
 
@@ -45,7 +45,6 @@ ultralytics/
             └── yolo11l.yaml
 ```
 
----
 
 ## Installation
 
@@ -60,7 +59,7 @@ cd BlueprINT-Detection
 pip install -r requirements.txt
 ```
 
----
+
 
 ## Training
 
@@ -79,7 +78,6 @@ model = YOLO("models/yolo11m.yaml")
 model.train(data="data/bone.yaml", epochs=100, imgsz=640, device=0)
 ```
 
----
 
 ## Inference
 
@@ -96,7 +94,7 @@ results = model("images/test/sample.png")
 results[0].show()
 ```
 
----
+
 
 ## Dataset Structure
 
@@ -118,7 +116,6 @@ Each label file follows YOLO format:
 class x_center y_center width height
 ```
 
----
 
 ## Evaluation
 
@@ -132,7 +129,6 @@ Metrics include:
 - **Lesion-level F1**
 - **Inference Speed (ms/img)**
 
----
 
 ## Export
 
@@ -141,7 +137,6 @@ Export the trained model for deployment:
 yolo export model=weights/best.pt format=onnx dynamic=True
 ```
 
----
 
 ## Acknowledgements
 
@@ -151,7 +146,6 @@ This repository is built upon:
 - [OpenCV](https://opencv.org/)
 - [BlueprINT: AI Framework for Bone Metastasis Evaluation (2025)](https://your-publication-link.com)
 
----
 
 <div align="center">
 
